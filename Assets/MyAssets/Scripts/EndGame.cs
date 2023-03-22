@@ -37,7 +37,7 @@ public class EndGame : MonoBehaviour
 
             if (sceneNbr == 0)
             {
-                SceneManager.LoadScene(sceneNbr + 1);
+                SceneManager.LoadScene(sceneNbr + 1);                 
             }
             else if (sceneNbr == 1)
             {
