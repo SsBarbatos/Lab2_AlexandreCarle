@@ -39,6 +39,10 @@ public class EndGame : MonoBehaviour
             {
                 SceneManager.LoadScene(sceneNbr + 1);
             }
+            else if (sceneNbr == 1)
+            {
+                SceneManager.LoadScene(sceneNbr + 1);
+            }
             else
             {
                 int score = _gameManager.GetScore();
