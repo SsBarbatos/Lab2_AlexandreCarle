@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class MeteorDetectZone : MonoBehaviour
+public class FallingTrees : MonoBehaviour
 {
     private bool _isTrigger = false;
     [SerializeField] private List<GameObject> _traplist = new List<GameObject>();

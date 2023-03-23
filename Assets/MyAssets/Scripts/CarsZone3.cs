@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeteorDetectZone : MonoBehaviour
+public class CarsZone3 : MonoBehaviour
 {
-    private bool _isTrigger = false;
+    private bool isTrigger = false;
     [SerializeField] private List<GameObject> _traplist = new List<GameObject>();
     private List<Rigidbody> _rbList = new List<Rigidbody>();
+    [SerializeField] private float _forceIntensity = 2000;
 
-    private void Start()
+    void Start()
     {
-        _isTrigger = false;
+        isTrigger = false;
 
         // _rb1 = _trap1.GetComponent<Rigidbody>();
 
@@ -22,9 +23,9 @@ public class MeteorDetectZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" && _isTrigger == false)
+        if (other.gameObject.tag == "Player" && isTrigger == false)
         {
-            _isTrigger = true;
+            isTrigger = true;
 
             // _rb1.useGravity = true;
             // _rb1.AddForce(Vector3.down * _forceIntensity);
@@ -32,6 +33,8 @@ public class MeteorDetectZone : MonoBehaviour
             foreach (var rb in _rbList)
             {
                 rb.useGravity = true;
+
+                rb.AddForce(Vector3.back * _forceIntensity);
             }
         }
     }

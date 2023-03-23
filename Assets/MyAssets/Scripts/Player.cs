@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float _vitesse = 500f;
+    private float _vitesse = 300f;
     private Rigidbody _rb;
 
     // méthodes privées
