@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a39a8bbb9cdebf4bad42539c3691f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ListGameObjects:
+  - {fileID: 6427756498099436350}
+  _ListMesh: []
 --- !u!54 &-5198505362884436263
 Rigidbody:
   m_ObjectHideFlags: 0

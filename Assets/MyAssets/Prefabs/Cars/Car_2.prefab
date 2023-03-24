@@ -163,6 +163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a39a8bbb9cdebf4bad42539c3691f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ListGameObjects:
+  - {fileID: 2304369133752408525}
+  - {fileID: 2305308938851042323}
+  - {fileID: 2305019213011481719}
+  - {fileID: 2305581056165409665}
+  - {fileID: 2304968832216807157}
+  _ListMesh: []
 --- !u!1 &2304968832216807157
 GameObject:
   m_ObjectHideFlags: 0
