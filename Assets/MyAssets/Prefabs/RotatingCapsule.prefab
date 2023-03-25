@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8336458229724076487}
   - component: {fileID: -4487297507129126440}
   - component: {fileID: 7589435046581233613}
+  - component: {fileID: 8574123573907686484}
   m_Layer: 0
   m_Name: RotatingCapsule
   m_TagString: Untagged
@@ -131,3 +132,15 @@ MonoBehaviour:
   _ListGameObjects:
   - {fileID: 0}
   _ListMesh: []
+--- !u!114 &8574123573907686484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3156065353942844652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35198f28f7dec748a16dc3fbce8af58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
