@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // ATTRIBUTS
-    private int _score;
+    private int score;
+    private double time;
 
     // METHODES PRIVEES
     private void Awake()
@@ -25,7 +26,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         InstructionDepart();
-        _score = 0;
+        score = 0;
+        time = Time.time;
     }
 
     void Update()
@@ -44,12 +46,18 @@ public class GameManager : MonoBehaviour
     // METHODES PUBLIQUES
     public void ScoreIncreasing()
     {
-        _score++;
-        Debug.Log("Nombre de collision : " + _score);
+        score++;
+        UIManager uiManager = FindObjectOfType<UIManager>();
+        uiManager.ScoreIncreasing(score);
     }
 
     public int GetScore()
     {
-        return _score;
+        return score;
+    }
+
+    public double GetTime()
+    { 
+        return time;
     }
 }

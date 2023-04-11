@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
 
     private void MouvementJoueur()
     {
-        float positionX = Input.GetAxis("Horizontal");
-        float positionZ = Input.GetAxis("Vertical");
+        float positionX = Input.GetAxisRaw("Horizontal");
+        float positionZ = Input.GetAxisRaw("Vertical");
 
         Vector3 direction = new Vector3(positionX, 0f, positionZ);
         // Empeche le vecteur de depasser 1 pour la direction
