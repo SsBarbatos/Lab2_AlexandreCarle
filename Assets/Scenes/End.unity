@@ -285,7 +285,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1965023044}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: ChargeFirstScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quitter
+  m_text: Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c281aa1c9249664695a5921c4713caa, type: 2}
   m_sharedMaterial: {fileID: 1698163700617428518, guid: 4c281aa1c9249664695a5921c4713caa, type: 2}
@@ -2229,6 +2229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa14cac6366e2246955000cdcc70067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ruleMenu: {fileID: 0}
 --- !u!4 &1965023045
 Transform:
   m_ObjectHideFlags: 0

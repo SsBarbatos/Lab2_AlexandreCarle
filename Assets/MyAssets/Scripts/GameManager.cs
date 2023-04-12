@@ -25,22 +25,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        InstructionDepart();
         score = 0;
         time = Time.time;
-    }
-
-    void Update()
-    {
-
-    }
-
-    public static void InstructionDepart()
-    {
-        Debug.Log("***  Past Present Futur  *********************************************************");
-        Debug.Log("* Le but du jeu est de terminer les 3 niveaux le plus rapidement possible.       *");
-        Debug.Log("* Chaque contact avec un mur ou un obstacle augmentera votre temps de 1 seconde. *");
-        Debug.Log("**********************************************************************************");
     }
 
     // METHODES PUBLIQUES

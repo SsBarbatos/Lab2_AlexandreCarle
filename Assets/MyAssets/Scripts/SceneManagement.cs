@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+    private bool onRules = false;
+    [SerializeField] private GameObject ruleMenu = default;
+
     public void Quit()
     {
         Application.Quit();
@@ -19,6 +22,19 @@ public class SceneManagement : MonoBehaviour
     public void ChargeFirstScene()
     {
         SceneManager.LoadScene(0);
+    }
 
+    public void RulesManager()
+    {
+        if (onRules == false)
+        {
+            ruleMenu.SetActive(true);
+            onRules = true;
+        }
+        else
+        {
+            ruleMenu.SetActive(false);
+            onRules = false;
+        }
     }
 }
