@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +10,10 @@ public class EndGame : MonoBehaviour
     private bool _endGame = false;
     private GameManager _gameManager;
     private Player _player;
+
+    [SerializeField] public TMP_Text scoreTxt = default;
+    [SerializeField] public TMP_Text timeTxt = default;
+    [SerializeField] public TMP_Text finalTxt = default;
 
     private void Start()
     {
@@ -35,28 +41,26 @@ public class EndGame : MonoBehaviour
             // Recuperer l'index de la scene
             int sceneNbr = SceneManager.GetActiveScene().buildIndex;
 
-            if (sceneNbr == 0)
+            if (sceneNbr == 1 || sceneNbr == 2)
             {
                 SceneManager.LoadScene(sceneNbr + 1);                 
             }
-            else if (sceneNbr == 1)
+            
+            if (sceneNbr == 3)
             {
-                SceneManager.LoadScene(sceneNbr + 1);
-            }
-            else
-            {
-                int score = _gameManager.GetScore();
-                float finalScore = Time.time + score;
                 _player.EndGamePlayer();
-
-                Debug.Log("Fin de partie!");
-                Debug.Log("Le temps est de " + Time.time + "sec");
-                Debug.Log("Vous avez accroché " + score + " obstacles...");
-                Debug.Log("Votre score final est de " + finalScore + "sec");
-
                 _endGame = true;
-            }
 
+                SceneManager.LoadScene(sceneNbr + 1);
+
+                int score = _gameManager.GetScore();
+                double time = _gameManager.GetTime();
+                double finalScore = time + score;
+
+                scoreTxt.text = "Pénalités : " + score.ToString();
+                timeTxt.text = "Temps total : " + time.ToString();
+                finalTxt.text = finalScore.ToString();
+            }
         }
     }
 }
